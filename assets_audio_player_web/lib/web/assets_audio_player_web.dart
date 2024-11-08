@@ -1,10 +1,10 @@
 import 'dart:async';
 
-import 'package:assets_audio_player_web/web/web_player_html.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 
 import 'abstract_web_player.dart';
+import 'web_player_html.dart';
 
 /// Web plugin
 class AssetsAudioPlayerWebPlugin {

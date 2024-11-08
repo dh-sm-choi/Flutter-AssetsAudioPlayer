@@ -6,7 +6,7 @@ import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'player/PlayingControls.dart';
 import 'player/PositionSeekWidget.dart';
 import 'player/SongsSelector.dart';
-import 'package:flutter_audio_query/flutter_audio_query.dart';
+// import 'package:flutter_audio_query/flutter_audio_query.dart';
 
 void main() {
   AssetsAudioPlayer.setupNotificationsOpenAction((notification) {
@@ -35,21 +35,21 @@ class _MyAppState extends State<MyApp> {
 
   void fetchAudios() async {
     /// create a FlutterAudioQuery instance.
-    final audioQuery = FlutterAudioQuery();
-    final songs = await audioQuery.getSongs();
+    // final audioQuery = FlutterAudioQuery();
+    // final songs = await audioQuery.getSongs();
     final fetchedAudios = <Audio>[];
-    for (final song in songs) {
-      if (song.filePath != null) {
-        final file = Audio.file(song.filePath!,
-            metas: Metas(
-              artist: song.artist,
-              album: song.album,
-              image: MetasImage.asset('assets/images/country.jpg'),
-              title: song.title,
-            ));
-        fetchedAudios.add(file);
-      }
-    }
+    // for (final song in songs) {
+    //   if (song.filePath != null) {
+    //     final file = Audio.file(song.filePath!,
+    //         metas: Metas(
+    //           artist: song.artist,
+    //           album: song.album,
+    //           image: MetasImage.asset('assets/images/country.jpg'),
+    //           title: song.title,
+    //         ));
+    //     fetchedAudios.add(file);
+    //   }
+    // }
     fetchedAudios.forEach((element) {
       print(element.path);
       // print(element.metas.image?.path);
